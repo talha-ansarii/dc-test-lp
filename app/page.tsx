@@ -27,7 +27,7 @@ const CONTENT = {
     logoSrc: "https://distanceconnect.in/logo.svg",
     signupUrl: "https://distanceconnect.in/auth/register",
     demoUrl: "https://youtu.be/BbUyV4Ba3MM",
-    socialProofLogos: [],
+    socialProofLogos: [] as { src: string; alt?: string }[],
   },
   roles: [
     {
@@ -299,8 +299,9 @@ function Hero({ activeRole, setActiveRole }: { activeRole: string; setActiveRole
           <p className="mt-2 text-xs text-slate-400">No card needed • Takes ~3 minutes to start</p>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="mt-10">
-          <div className={cx("relative mx-auto max-w-5xl rounded-3xl p-1", glass)}>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
+          <div className="mt-10">
+            <div className={cx("relative mx-auto max-w-5xl rounded-3xl p-1", glass)}>
             <div className="rounded-3xl bg-[#0B1020] p-6 border border-white/10">
               <div className="flex items-center gap-2 text-slate-300 text-sm">
                 <Laptop className="h-4 w-4" /> <span>Live interview simulation</span>
@@ -321,6 +322,7 @@ function Hero({ activeRole, setActiveRole }: { activeRole: string; setActiveRole
               </div>
             </div>
             <div className="pointer-events-none absolute inset-0 rounded-3xl shadow-[0_0_120px_rgba(45,127,255,0.35)]" aria-hidden />
+          </div>
           </div>
         </motion.div>
       </div>
