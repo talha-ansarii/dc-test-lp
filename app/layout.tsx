@@ -1,6 +1,7 @@
-// app/layout.tsx
-import "./globals.css";
+
 import type { Metadata } from "next";
+
+import "./globals.css";
 
 export const metadata: Metadata = {
   title:
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Distance Connect InterAI",
     images: [
       {
-        url: "/og.png",
+        url: "/logo.png",
         width: 1200,
         height: 630,
         alt: "Distance Connect InterAI – AI Interview Assistant",
