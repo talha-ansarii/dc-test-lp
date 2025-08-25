@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/smallLogo.png" }],
 };
 
 export default function RootLayout({
